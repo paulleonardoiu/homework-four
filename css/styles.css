@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(26, 28, 24);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: "proxima";
+  src: url(/fonts/FontsFree-Net-Proxima-Nova-ExCn-Reg.otf);
+}
+.site-container {
+  max-width: 100%;
+  min-height: 500px;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 800px;
+  height: 92px;
+  margin: 0 auto;
+  font-family: "proxima-nova";
+  color: #79ADDC;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  border-bottom: 1px solid white;
+}
+@media only screen and (max-width: 800px) {
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  nav .logo {
+    display: none;
+  }
+  nav .links {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+  }
+  nav .links a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+}
+nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav .logo {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+nav a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+nav .border {
+  border-right: 1px solid #79ADDC;
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
+  background-image: url(../images/hero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero .container p {
+    width: 500px;
+  }
+}
+.hero .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+.hero .container {
+  text-align: center;
+  font-family: "proxima-nova";
+  color: white;
+  display: inline;
+  z-index: 0;
+}
+.hero .container h1 {
+  font-size: 60px;
+}
+.hero .container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  font-style: italic;
+  padding: 20px;
+}
+.hero .container .read-more {
+  margin: 0 auto;
+  background-color: #79ADDC;
+  color: white;
+  padding: 11px 21px;
+  border: none;
+  width: 130px;
+  height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.promos {
+  width: 100%;
+  min-height: 400px;
+  background-color: white;
+  margin-top: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .promos .promo-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.promos .promo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.promos .promo-container .promo {
+  position: relative;
+  width: 240px;
+  height: 304px;
+  overflow: hidden;
+  text-align: center;
+  font-family: "proxima-nova";
+  color: white;
+  padding: 40px 20px;
+  margin: 25px;
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+.promos .promo-container .promo .overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.promos .promo-container .promo h1 {
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+.promos .promo-container .promo h2 {
+  margin-bottom: 50px;
+  font-weight: 100;
+}
+.promos .promo-container .promo .learn-more {
+  margin: 0 auto;
+  background-color: #79ADDC;
+  color: white;
+  padding: 11px 21px;
+  border: none;
+  width: 135px;
+  height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.promos .promo-container .promo-bg-1 {
+  background-image: url(../images/promo-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.promos .promo-container .promo-bg-2 {
+  background-image: url(../images/promo-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.promos .promo-container .promo-bg-3 {
+  background-image: url(../images/promo-3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.booking {
+  min-height: 300px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0 100px 0;
+}
+@media only screen and (max-width: 800px) {
+  .booking .form h1 {
+    text-align: center;
+  }
+  .booking .double-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .booking .double-input h1 {
+    margin: 20px;
+    width: 100px;
+  }
+  .booking .double-input input {
+    margin: 20px;
+  }
+  .booking .checkInOut {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .booking .date-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .booking .date-input .dateLabel {
+    text-align: center;
+  }
+  .booking .guest-count .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .booking .guest-count .container .selector {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .booking .guest-count .container .selector label {
+    margin-right: 0px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 801px) {
+  .booking .double-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .booking .double-input input {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .booking .double-input .left {
+    width: 40%;
+    margin-right: 20px;
+  }
+  .booking .double-input .right {
+    width: 60%;
+  }
+  .booking .guest-count .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+.booking .form {
+  width: 820px;
+  height: 100%;
+  font-family: "proxima-nova";
+}
+.booking .form input {
+  font-size: 18px;
+  padding: 20px;
+}
+.booking .form label {
+  font-size: 18px;
+  margin-right: 0px;
+}
+.booking .form h1 {
+  font-size: 60px;
+  font-weight: 100;
+}
+.booking .form .date-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.booking .form .date-input label {
+  width: 15%;
+}
+.booking .form .date-input input {
+  width: 85%;
+}
+.booking .form .guest-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.booking .form .guest-count .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.booking .form .guest-count .container .selector {
+  padding-left: 10px;
+  text-align: center;
+}
+.booking .form .guest-count .container .selector select {
+  font-size: 18px;
+  padding: 20px;
+  width: 100%;
+}
+.booking .form .message {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.booking .form .message textarea {
+  padding: 15px 20px;
+  font-size: 18px;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
+  min-height: 192px;
+}
+.booking .form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #79ADDC;
+  color: white;
+  padding: 11px 21px;
+  border: none;
+  width: 100%;
+  height: 60px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #79ADDC;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .container h1, footer .container p {
+  font-family: "proxima-nova";
+  color: white;
+  margin: 0;
+}
+footer .container h1 {
+  font-size: 20px;
+}
+footer .container p {
+  font-size: 12px;
+  font-weight: 100;
+}
+footer .container .socials i {
+  font-size: 25px;
+  color: white;
+  margin-right: 5px;
+}
